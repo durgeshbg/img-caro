@@ -1,7 +1,7 @@
 display = function (frameElement, carousalElement, imgID) {
   const prevImg = frame.removeChild(frameElement.firstElementChild);
   carousalElement.appendChild(prevImg);
-  frame.appendChild(document.getElementById(imgID));
+  frameElement.appendChild(document.getElementById(imgID));
   activeImg();
 };
 
