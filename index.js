@@ -1,5 +1,5 @@
 display = function (frameElement, carousalElement, imgID) {
-  const prevImg = frame.removeChild(frameElement.firstElementChild);
+  const prevImg = frameElement.removeChild(frameElement.firstElementChild);
   carousalElement.appendChild(prevImg);
   frameElement.appendChild(document.getElementById(imgID));
   activeImg();
@@ -20,4 +20,3 @@ exports.moveRight = function (frameElement, carousalElement) {
 
   display(frameElement, carousalElement, nextImgID);
 };
-
