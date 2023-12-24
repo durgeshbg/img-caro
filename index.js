@@ -35,13 +35,13 @@ exports.createNav = function (frameElement, carousalElement) {
     navItem.onclick = () => display(frameElement, carousalElement, img.id);
     navContainer.append(navItem);
   });
-  activeImg(frameElement);
+  activeImg(navContainer, frameElement);
   return navContainer;
 };
 
-function activeImg(frameElement) {
+function activeImg(navContainer, frameElement) {
   const activeImgID = frameElement.firstElementChild.id;
-  document.querySelectorAll('.nav-item').forEach((item) => {
+  navContainer.forEach((item) => {
     item.classList.remove('active');
     if (item.classList[1] === activeImgID) {
       item.classList.add('active');
