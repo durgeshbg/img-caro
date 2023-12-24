@@ -32,7 +32,7 @@ exports.createNav = function (frameElement, carousalElement) {
   imgs.forEach((img) => {
     const navItem = document.createElement('div');
     navItem.classList.add('nav-item', img.id);
-    navItem.onclick = () => display(frameElement, carousalElement);
+    navItem.onclick = () => display(frameElement, carousalElement, img.id);
     navContainer.append(navItem);
   });
   document.querySelector('body').append(navContainer);
