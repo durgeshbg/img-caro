@@ -19,3 +19,27 @@ exports.moveRight = function (frameElement, carousalElement) {
 
   display(frameElement, carousalElement, nextImgID);
 };
+
+exports.createNav = function (carousalElement) {
+  const imgs = document.querySelectorAll(`img`);
+  const navContainer = document.createElement('div');
+  navContainer.classList.add('nav-container');
+  imgs.forEach((img) => {
+    const navItem = document.createElement('div');
+    navItem.classList.add('nav-item', img.id);
+    navItem.onclick = () => display(frameElement, carousalElement);
+    navContainer.append(navItem);
+  });
+  document.querySelector('body').append(navContainer);
+  activeImg(frameElement);
+};
+
+function activeImg(frameElement) {
+  const activeImgID = frameElement.firstElementChild.id;
+  document.querySelectorAll('.nav-item').forEach((item) => {
+    item.classList.remove('active');
+    if (item.classList[1] === activeImgID) {
+      item.classList.add('active');
+    }
+  });
+}
