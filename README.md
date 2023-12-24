@@ -2,6 +2,7 @@
 
 Just a fun project to learn.
 
+### HTML
 ```html
 <div class="container">
   <div class="left">⏮</div> <!-- button 1 -->
@@ -18,4 +19,17 @@ Just a fun project to learn.
   
   <div class="right">⏭</div> <!-- button 2 -->
 </div>
+```
+# JS
+- `moveRight` - moves image to right
+- `moveLeft` - moves image to left
+```js
+const imgCaro = require('img-caro');
+
+document.querySelector('.right').onclick = () => {
+  imgCaro.moveRight(
+    document.querySelector('.frame'), 
+    document.querySelector('.carousal')
+  )
+};
 ```
