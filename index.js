@@ -35,7 +35,7 @@ exports.createNav = function (frameElement, carousalElement) {
     navItem.onclick = () => display(frameElement, carousalElement, img.id);
     navContainer.append(navItem);
   });
-  document.querySelector('.container').after(navContainer);
+  carousalElement.after(navContainer);
   activeImg(frameElement);
 };
 
