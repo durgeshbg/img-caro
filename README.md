@@ -62,9 +62,10 @@ imgCaro.createNav(frameElement, carousalElement);
 ```
 DOM structure for Navbar
 ```
-nav-container
-   |- nav-item
-   |- nav-item
+container
+  | nav-container
+     |- nav-item
+     |- nav-item
 ```
 The classes above can be used to style as follows
 ```css
