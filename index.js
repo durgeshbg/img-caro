@@ -1,5 +1,5 @@
 let isNAV = false;
-display = function (frameElement, carousalElement, imgID) {
+const display = function (frameElement, carousalElement, imgID) {
   const prevImg = frameElement.removeChild(frameElement.firstElementChild);
   carousalElement.appendChild(prevImg);
   frameElement.appendChild(document.getElementById(imgID));
