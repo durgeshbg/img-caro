@@ -20,7 +20,7 @@ exports.moveRight = function (frameElement, carousalElement) {
   display(frameElement, carousalElement, nextImgID);
 };
 
-exports.createNav = function (carousalElement) {
+exports.createNav = function (frameElement, carousalElement) {
   const imgs = document.querySelectorAll(`img`);
   const navContainer = document.createElement('div');
   navContainer.classList.add('nav-container');
