@@ -41,10 +41,10 @@ exports.createNav = function (frameElement, carousalElement) {
 
 function activeImg(navContainer, frameElement) {
   const activeImgID = frameElement.firstElementChild.id;
-  for (let item in navContainer) {
+  navContainer.childNodes.forEach((item) => {
     item.classList.remove('active');
     if (item.classList[1] === activeImgID) {
       item.classList.add('active');
     }
-  }
+  });
 }
