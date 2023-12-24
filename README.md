@@ -43,3 +43,36 @@ To automatically move images use `moveRight` or `moveLeft` to call periodically
 ```js
 window.setInterval(() => imgCaro.moveRight(frameElement, carousalElement), 1000);
 ```
+---
+### Navigation for Images
+This create a small bar and supports click to skip images
+```js
+imgCaro.createNav(frameElement, carousalElement);
+```
+DOM structure for Navbar
+```
+nav-container
+   |- nav-item
+   |- nav-item
+```
+The classes above can be used to style as follows
+```css
+.nav-container {
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+.nav-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+.nav-item.active {
+  opacity: 1;
+}
+```
