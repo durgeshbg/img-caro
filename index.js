@@ -4,7 +4,7 @@ const display = function (frameElement, carousalElement, imgID) {
   carousalElement.appendChild(prevImg);
   frameElement.appendChild(document.getElementById(imgID));
   if (isNAV) {
-    activeImg(frameElement);
+    activeImg(document.querySelector('.nav-container'), frameElement);
   }
 };
 
