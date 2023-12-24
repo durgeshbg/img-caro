@@ -2,7 +2,7 @@
 
 Just a fun project to learn.
 
-## HTML
+## Init HTML
 ```html
 <div class="container">
   <div class="left">⏮</div> <!-- button 1 -->
@@ -20,6 +20,17 @@ Just a fun project to learn.
   <div class="right">⏭</div> <!-- button 2 -->
 </div>
 ```
+## Init CSS
+```css
+.frame img {
+  display: block;
+}
+
+img {
+  display: none;
+}
+```
+
 ## JS
 ### Import
 ```js
