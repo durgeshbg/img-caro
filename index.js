@@ -1,7 +1,11 @@
+let isNAV = false;
 display = function (frameElement, carousalElement, imgID) {
   const prevImg = frameElement.removeChild(frameElement.firstElementChild);
   carousalElement.appendChild(prevImg);
   frameElement.appendChild(document.getElementById(imgID));
+  if (isNAV) {
+    activeImg(frameElement);
+  }
 };
 
 exports.moveLeft = function (frameElement, carousalElement) {
@@ -23,6 +27,7 @@ exports.moveRight = function (frameElement, carousalElement) {
 exports.createNav = function (frameElement, carousalElement) {
   const imgs = document.querySelectorAll(`img`);
   const navContainer = document.createElement('div');
+  isNAV = true;
   navContainer.classList.add('nav-container');
   imgs.forEach((img) => {
     const navItem = document.createElement('div');
